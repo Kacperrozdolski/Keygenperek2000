@@ -37,6 +37,10 @@ it affects perception.
 
 ## transparency note
 
+if you want full experience
+- **go to**  
+  https://perek2000.com
+
 if you are uncomfortable running unfamiliar software:
 
 - **read the source code first:**  
