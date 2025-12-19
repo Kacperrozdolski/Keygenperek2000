@@ -1,0 +1,70 @@
+appId: com.perek2000.app
+productName: 'perek2000'
+directories:
+  buildResources: build
+icon: build/icon.ico
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!{.eslintcache,eslint.config.mjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
+  - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
+asarUnpack:
+  - resources/**
+  - "**/*.mp4"
+  - "**/*.png"
+  - public/**
+extraResources:
+  - from: 'resources/wallpaper.png'
+    to: 'wallpaper.png'
+  - from: 'src/renderer/assets/animations'
+    to: 'animations'
+  - from: 'src/renderer/assets/images'
+    to: 'images'
+  - from: 'public/videos'
+    to: 'videos'
+asar: true
+win:
+  executableName: 'perek2000'
+  icon: build/icon.ico
+  sign: false
+  target:
+    - target: portable
+      arch:
+        - x64
+  requestedExecutionLevel: asInvoker
+  forceCodeSigning: false
+nsis:
+  artifactName: ${name}-${version}-setup.${ext}
+  shortcutName: ${productName}
+  uninstallDisplayName: ${productName}
+  createDesktopShortcut: always
+mac:
+  entitlementsInherit: build/entitlements.mac.plist
+  icon: build/icon.icns
+  extendInfo:
+    - NSCameraUsageDescription: Application requests access to the device's camera.
+    - NSMicrophoneUsageDescription: Application requests access to the device's microphone.
+    - NSDocumentsFolderUsageDescription: Application requests access to the user's Documents folder.
+    - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
+    - NSAppleEventsUsageDescription: This app uses AppleScript to customize your desktop wallpaper and manage windows.
+    - LSUIElement: true
+  notarize: false
+  gatekeeperAssess: false
+  hardenedRuntime: false
+dmg:
+  artifactName: ${name}-${version}.${ext}
+linux:
+  icon: build/icon.png
+  target:
+    - AppImage
+    - snap
+    - deb
+  maintainer: electronjs.org
+  category: Utility
+appImage:
+  artifactName: ${name}-${version}.${ext}
+npmRebuild: false
+publish:
+  provider: generic
+  url: https://example.com/auto-updates

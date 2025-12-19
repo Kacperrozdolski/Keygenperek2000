@@ -1,0 +1,35 @@
+{
+  "name": "perek2000",
+  "version": "1.0.0",
+  "description": "Perek2000 - Pierdolony geniusz",
+  "main": "./out/main/index.js",
+  "author": "Perek2000",
+  "homepage": "https://perek2000.com",
+  "scripts": {
+    "lint": "eslint --cache .",
+    "start": "electron-vite preview",
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "postinstall": "electron-builder install-app-deps",
+    "build:unpack": "npm run build && electron-builder --dir",
+    "build:win": "npm run build && electron-builder --win",
+    "build:mac": "npm run build && electron-builder --mac",
+    "build:linux": "npm run build && electron-builder --linux"
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "^3.0.2",
+    "@electron-toolkit/utils": "^4.0.0"
+  },
+  "devDependencies": {
+    "@electron-toolkit/eslint-config": "^2.1.0",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "electron": "^38.7.2",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^5.0.0",
+    "eslint": "^9.36.0",
+    "eslint-plugin-vue": "^10.4.0",
+    "vite": "^7.3.0",
+    "vue": "^3.5.21",
+    "vue-eslint-parser": "^10.2.0"
+  }
+}
