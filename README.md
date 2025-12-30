@@ -50,7 +50,7 @@ if you are uncomfortable running unfamiliar software:
 if you are not technical or prefer not to execute anything locally:
 
 - **watch a full playback recording:**  
-  https://youtu.be/4xLQtd0RmEM [unavailable till perek2000 experience drops]
+  https://youtu.be/odtfckOpp84 [unavailable till perek2000 experience drops]
   (a complete run, recorded as-is, without interaction)
 
 nothing here is hidden on purpose.  
